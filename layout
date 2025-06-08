@@ -1,0 +1,23 @@
+import "./globals.css"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
+import React, { ReactNode } from "react"
+import SmoothScroll from './../components/smoothScrollProvider';
+
+
+export default function RootLayout({ children }: RootLayoutProps) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+          <SmoothScroll>
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
+          </SmoothScroll>
+       </body>
+    </html>
+  )
+}
+
